@@ -38,8 +38,10 @@ class MainActivity : AppCompatActivity() {
             try {
                 // Executar Requisição
                 val response = requestDrinks()
+
                 // A partir da respota escolher um drink aleatório
                 val drink = response.DrinkRemoteEntities.random()
+
                 // Colocar o nome do drink aleatório escolhido no textview
                 drinkName.text = drink.strDrink
             } catch (e: Exception) {
